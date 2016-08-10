@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h1 style="background-color:red; color:white; text-align:center;">
+    <%= @e.message.upcase %></h1>
+
+    <h3>Backtrace:</h3>
+    <div>
+      <p><%= @e.backtrace.inspect %></p>
+    </div>
+  <body>
+</html>
