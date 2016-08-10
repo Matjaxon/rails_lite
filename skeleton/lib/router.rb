@@ -22,8 +22,7 @@ class Route
       match_data = self.pattern.match(req.path)
       params_hash = Hash[match_data.names.zip(match_data.captures)]
 
-      controller = self.controller_class.name.match(/^\S+/).to_s.constantize
-      controller.new(req, res, params_hash)
+      controller_class.new(req, res, params_hash)
         .invoke_action(self.action_name)
     end
   end

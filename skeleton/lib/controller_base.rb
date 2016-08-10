@@ -11,7 +11,6 @@ class ControllerBase
     @req = req
     @res = res
     @params = params
-    p @params
   end
 
   # Helper method to alias @already_built_response
